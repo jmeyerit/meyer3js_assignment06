@@ -12,6 +12,7 @@
         <div>
             <h1 id="wrapper">Meyer3js and reilmajb Assignment 6</h1>
             <asp:RegularExpressionValidator ID="dateValRegex" runat="server" ControlToValidate="tbDateOfTransaction" ErrorMessage="Please Enter a valid date in the format (mm/dd/yyyy)" ValidationExpression="^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="timeValRegex" runat="server" ControlToValidate="tbTimeOfTransaction" ErrorMessage="Please Enter a valid time in the format (HH:MM)" ValidationExpression="([0-1]?\d|2[0-3]):([0-5]?\d)(:([0-5]?\d))?"></asp:RegularExpressionValidator>
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
@@ -31,6 +32,7 @@
                         <br />
                     
                                 <asp:TextBox runat="server" ID="tbDateOfTransaction"></asp:TextBox> 
+                                <asp:RequiredFieldValidator ID="rfvDate" runat="server" ControlToValidate="tbDateOfTransaction" ErrorMessage="*"></asp:RequiredFieldValidator>
                                
                             </asp:TableCell>
 
@@ -38,6 +40,7 @@
                                 Enter the Time of Transaction:
                         <br />
                                 <asp:TextBox runat="server" ID="tbTimeOfTransaction"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvTime" ControlToValidate="tbTimeOfTransaction" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                             </asp:TableCell>
 
                             <asp:TableCell runat="server">
@@ -112,9 +115,11 @@
 
             <br />
             <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
+            
+            
 
         </div>
-        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure">
+        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure" CancelSelectOnNullParameter="False">
             <SelectParameters>
                 <asp:ControlParameter ControlID="ddlLoyalty" Name="LoyaltyID" PropertyName="SelectedValue" Type="Int32" />
                 <asp:ControlParameter ControlID="tbDateOfTransaction" Name="DateOfTransaction" PropertyName="Text" Type="String" />
