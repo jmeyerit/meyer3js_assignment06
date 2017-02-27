@@ -67,8 +67,8 @@
                     </td>
                 </tr>
             </table>
-            <asp:DropDownList runat="server" ID="DELETEATSOMEPOINTcouponDetailsNULLVALUES"></asp:DropDownList>
-            <asp:DropDownList runat="server" ID="DONTKNOWTRANSACTIONID"></asp:DropDownList>
+            <br />
+            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" />
 
         </div>
         <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure">
