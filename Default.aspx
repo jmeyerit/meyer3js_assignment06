@@ -13,44 +13,56 @@
             <h1 id="wrapper">Meyer3js and reilmajb Assignment 6</h1>
             <table>
                 <tr>
-                    <td>Pick the Loyalty Number:                      
+                    <td>Pick the Loyalty Number:        
+                        <br />
                         <asp:DropDownList runat="server" ID="ddlLoyalty"></asp:DropDownList>
                     </td>
                     <td>Enter the Date of Transaction:
+                        <br />
                         <asp:TextBox runat="server" ID="tbDateOfTransaction"></asp:TextBox>
                     </td>
                     <td>Enter the Time of Transaction:
+                        <br />
                         <asp:TextBox runat="server" ID="tbTimeOfTransaction"></asp:TextBox>
                     </td>
                     <td>Pick the Type of Transaction:
+                        <br />
                         <asp:DropDownList runat="server" ID="ddlTransactionType"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td>Pick the Store:
+                        <br />
                         <asp:DropDownList runat="server" ID="ddlStore"></asp:DropDownList>
                     </td>
                     <td>Pick the Employee:
+                        <br />
                         <asp:DropDownList runat="server" ID="ddlEmployee"></asp:DropDownList>
                     </td>
                     <td>Pick the Product:
+                        <br />
                         <asp:DropDownList runat="server" ID="ddlProduct"></asp:DropDownList>
                     </td>
                     <td>Enter the Quantity:
+                        <br />
                         <asp:TextBox runat="server" ID="tbQty"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Enter Price Per Sellable Unit As Marked:
+                        <br />
                         <asp:TextBox runat="server" ID="tbPricePerSellableUnitAsMarked"></asp:TextBox>
                     </td>
                     <td>Enter Price Per Sellable Unit To The Customer:
+                        <br />
                         <asp:TextBox runat="server" ID="tbPricePerSellableUnitToTheCustomer"></asp:TextBox>
                     </td>
                     <td>Enter Transaction Comment:
+                        <br />
                         <asp:TextBox runat="server" ID="tbTransactionComment"></asp:TextBox>
                     </td>
                     <td>Enter Transaction Detail Comment:
+                        <br />
                         <asp:TextBox runat="server" ID="tbTransactionDetailComment"></asp:TextBox>
                     </td>
                 </tr>
