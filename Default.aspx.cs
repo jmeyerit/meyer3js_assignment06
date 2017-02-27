@@ -6,15 +6,13 @@
 * This assignment demonstrates our ability to use Github and collaborate on the same project. It also tests 
 * us on our ability to connect to the database and add information to it based on data entry from a user.
 * This code behind file contains the logic for the buttons and drop down lists.
-* Due Date: Wednesday, February 22nd, 2017 by 6:00pm
+* Due Date: Wednesday, March 1st, 2017 by 6:00pm
 * Citations: 
 * 
 * 
 * REFERENCES:
 * 
-* C# Final Project Fall 2016 - How to add parameters to a DataTable
-* http://stackoverflow.com/questions/5721904/make-body-fill-entire-screen - How to make body fill entire screen.
-* http://www.buildcomputers.net/computer-case-sizes.html - Computer case sizes reference for DB creation
+* https://www.youtube.com/watch?v=xUU9MdnohrI - Helpful for calling a Stored procedure
 * 
 * ALWAYS think of the cat
 * **********************************************************************************************************/
@@ -35,11 +33,15 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        // Only populate the drop down lists on initial Page Load.
         if (!IsPostBack) {
             PopulateDropDownLists();
         }
     }
 
+    /// <summary>
+    /// This method populates the relevant drop down lists with their relevant data
+    /// </summary>
     private void PopulateDropDownLists() {
 
         // Populates Employee DropDownList
@@ -88,7 +90,17 @@ public partial class _Default : System.Web.UI.Page
         ddlTransactionType.SelectedIndex = 0;
     }
 
+    /// <summary>
+    /// This event fires the stored procedure if all validation controls check through
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     protected void BtnSubmit_Click(object sender, EventArgs e) {
-        SqlDataSource.Select(DataSourceSelectArguments.Empty);
+
+        
+            SqlDataSource.Select(DataSourceSelectArguments.Empty);
+        
+            lblSuccess.Text = "One or more fields are empty. Try again";
+          
     }
 }

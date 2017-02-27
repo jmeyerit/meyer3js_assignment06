@@ -104,12 +104,13 @@
 
                     </asp:Table>
 
+
+
+                    <br />
+                    <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
+                    <asp:Label ID="lblSuccess" runat="server" Text="" ></asp:Label>
                 </ContentTemplate>
             </asp:UpdatePanel>
-
-            <br />
-            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
-
         </div>
         <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure" CancelSelectOnNullParameter="False">
             <SelectParameters>
