@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <h1 id="wrapper">Meyer3js and reilmajb Assignment 6</h1>
-
+            <asp:RegularExpressionValidator ID="dateValRegex" runat="server" ControlToValidate="tbDateOfTransaction" ErrorMessage="Please Enter a valid date in the format (mm/dd/yyyy)" ValidationExpression="^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$"></asp:RegularExpressionValidator>
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
@@ -29,7 +29,9 @@
                             <asp:TableCell runat="server">
                                 Enter the Date of Transaction:
                         <br />
-                                <asp:TextBox runat="server" ID="tbDateOfTransaction"></asp:TextBox>
+                    
+                                <asp:TextBox runat="server" ID="tbDateOfTransaction"></asp:TextBox> 
+                               
                             </asp:TableCell>
 
                             <asp:TableCell runat="server">
@@ -105,12 +107,12 @@
                     </asp:Table>
 
 
-
-                    <br />
-                    <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
-                    <asp:Label ID="lblSuccess" runat="server" Text="" ></asp:Label>
                 </ContentTemplate>
             </asp:UpdatePanel>
+
+            <br />
+            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
+
         </div>
         <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure" CancelSelectOnNullParameter="False">
             <SelectParameters>
