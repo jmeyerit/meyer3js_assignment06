@@ -115,7 +115,7 @@
 
             <br />
             <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
-            
+            <asp:Label ID="lblSuccess" runat="server" Text="" ></asp:Label>
             
 
         </div>

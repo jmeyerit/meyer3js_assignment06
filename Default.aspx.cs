@@ -97,12 +97,14 @@ public partial class _Default : System.Web.UI.Page
     /// <param name="e"></param>
     protected void BtnSubmit_Click(object sender, EventArgs e) {
 
-       
+       try {
             SqlDataSource.Select(DataSourceSelectArguments.Empty);
-        
-            
-        
-            
-          
+            lblSuccess.Text = "Record submitted successfully!";
+        }
+        catch (Exception ex) {
+            lblSuccess.Text = ex.Message;
+        }  
     }
+
+
 }
