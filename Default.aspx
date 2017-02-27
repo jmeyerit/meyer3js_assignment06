@@ -15,7 +15,7 @@
                 <tr>
                     <td>Pick the Loyalty Number:        
                         <br />
-                        <asp:DropDownList runat="server" ID="ddlLoyalty"></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="ddlLoyalty" AutoPostBack="true"></asp:DropDownList>
                     </td>
                     <td>Enter the Date of Transaction:
                         <br />
@@ -27,21 +27,21 @@
                     </td>
                     <td>Pick the Type of Transaction:
                         <br />
-                        <asp:DropDownList runat="server" ID="ddlTransactionType"></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="ddlTransactionType" AutoPostBack="true"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td>Pick the Store:
                         <br />
-                        <asp:DropDownList runat="server" ID="ddlStore"></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="ddlStore" AutoPostBack="true"></asp:DropDownList>
                     </td>
                     <td>Pick the Employee:
                         <br />
-                        <asp:DropDownList runat="server" ID="ddlEmployee"></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="ddlEmployee" AutoPostBack="true"></asp:DropDownList>
                     </td>
                     <td>Pick the Product:
                         <br />
-                        <asp:DropDownList runat="server" ID="ddlProduct"></asp:DropDownList>
+                        <asp:DropDownList runat="server" ID="ddlProduct" AutoPostBack="true"></asp:DropDownList>
                     </td>
                     <td>Enter the Quantity:
                         <br />
