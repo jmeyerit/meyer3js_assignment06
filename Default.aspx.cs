@@ -97,10 +97,12 @@ public partial class _Default : System.Web.UI.Page
     /// <param name="e"></param>
     protected void BtnSubmit_Click(object sender, EventArgs e) {
 
-        
+       
             SqlDataSource.Select(DataSourceSelectArguments.Empty);
         
-            lblSuccess.Text = "One or more fields are empty. Try again";
+            
+        
+            
           
     }
 }
