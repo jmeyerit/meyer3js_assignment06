@@ -24,7 +24,7 @@
             <asp:DropDownList runat="server" ID="DELETEATSOMEPOINTcouponDetailsNULLVALUES"></asp:DropDownList>
             <asp:DropDownList runat="server" ID="DONTKNOWTRANSACTIONID"></asp:DropDownList>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure">
+        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure">
             <SelectParameters>
                 <asp:ControlParameter ControlID="ddlLoyalty" Name="LoyaltyID" PropertyName="SelectedValue" Type="Int32" />
                 <asp:ControlParameter ControlID="tbDateOfTransaction" Name="DateOfTransaction" PropertyName="Text" Type="String" />

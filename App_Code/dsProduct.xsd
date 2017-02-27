@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GroceryStoreSimulatorConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GroceryStoreSimulatorConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GroceryStoreSimulatorConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tNameTableAdapter" GeneratorDataComponentClassName="tNameTableAdapter" Name="tName" UserDataComponentName="tNameTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tProductTableAdapter" GeneratorDataComponentClassName="tProductTableAdapter" Name="tProduct" UserDataComponentName="tProductTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="GroceryStoreSimulatorConnectionString (Web.config)" DbObjectName="GroceryStoreSimulator.dbo.tName" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -152,13 +152,13 @@ GROUP BY tName.Name</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsProduct" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsProduct" msprop:Generator_DataSetName="dsProduct">
+  <xs:element name="dsProduct" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsProduct" msprop:Generator_UserDSName="dsProduct">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tName" msprop:Generator_TableClassName="tNameDataTable" msprop:Generator_TableVarName="tabletName" msprop:Generator_TablePropName="tName" msprop:Generator_RowDeletingName="tNameRowDeleting" msprop:Generator_RowChangingName="tNameRowChanging" msprop:Generator_RowEvHandlerName="tNameRowChangeEventHandler" msprop:Generator_RowDeletedName="tNameRowDeleted" msprop:Generator_UserTableName="tName" msprop:Generator_RowChangedName="tNameRowChanged" msprop:Generator_RowEvArgName="tNameRowChangeEvent" msprop:Generator_RowClassName="tNameRow">
+        <xs:element name="tProduct" msprop:Generator_TableClassName="tProductDataTable" msprop:Generator_TableVarName="tabletProduct" msprop:Generator_RowChangedName="tProductRowChanged" msprop:Generator_TablePropName="tProduct" msprop:Generator_RowDeletingName="tProductRowDeleting" msprop:Generator_RowChangingName="tProductRowChanging" msprop:Generator_RowEvHandlerName="tProductRowChangeEventHandler" msprop:Generator_RowDeletedName="tProductRowDeleted" msprop:Generator_RowClassName="tProductRow" msprop:Generator_UserTableName="tProduct" msprop:Generator_RowEvArgName="tProductRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ProductID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProductID" msprop:Generator_ColumnPropNameInRow="ProductID" msprop:Generator_ColumnPropNameInTable="ProductIDColumn" msprop:Generator_UserColumnName="ProductID" type="xs:int" minOccurs="0" />
+              <xs:element name="ProductID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProductID" msprop:Generator_ColumnPropNameInRow="ProductID" msprop:Generator_ColumnPropNameInTable="ProductIDColumn" msprop:Generator_UserColumnName="ProductID" type="xs:int" />
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -172,7 +172,7 @@ GROUP BY tName.Name</CommandText>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:tName" />
+      <xs:selector xpath=".//mstns:tProduct" />
       <xs:field xpath="mstns:ProductID" />
     </xs:unique>
   </xs:element>

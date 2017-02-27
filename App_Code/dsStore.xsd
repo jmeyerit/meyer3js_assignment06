@@ -26,7 +26,7 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        StoreID, RTRIM(Store) + ', ' + LTRIM(Address1) AS Store
+                    <CommandText>SELECT        StoreID, RTRIM(Store) + ', ' + LTRIM(RTRIM(Address1)) AS Store
 FROM            tStore
 ORDER BY Store</CommandText>
                     <Parameters />
@@ -53,7 +53,7 @@ ORDER BY Store</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsStore" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsStore" msprop:Generator_DataSetName="dsStore">
+  <xs:element name="dsStore" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsStore" msprop:Generator_UserDSName="dsStore">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tStore" msprop:Generator_TableClassName="tStoreDataTable" msprop:Generator_TableVarName="tabletStore" msprop:Generator_TablePropName="tStore" msprop:Generator_RowDeletingName="tStoreRowDeleting" msprop:Generator_RowChangingName="tStoreRowChanging" msprop:Generator_RowEvHandlerName="tStoreRowChangeEventHandler" msprop:Generator_RowDeletedName="tStoreRowDeleted" msprop:Generator_UserTableName="tStore" msprop:Generator_RowChangedName="tStoreRowChanged" msprop:Generator_RowEvArgName="tStoreRowChangeEvent" msprop:Generator_RowClassName="tStoreRow">
