@@ -30,10 +30,10 @@
                             <asp:TableCell runat="server">
                                 Enter the Date of Transaction:
                         <br />
-                    
-                                <asp:TextBox runat="server" ID="tbDateOfTransaction"></asp:TextBox> 
+
+                                <asp:TextBox runat="server" ID="tbDateOfTransaction"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvDate" runat="server" ControlToValidate="tbDateOfTransaction" ErrorMessage="*"></asp:RequiredFieldValidator>
-                               
+
                             </asp:TableCell>
 
                             <asp:TableCell runat="server">
@@ -109,14 +109,16 @@
 
                     </asp:Table>
 
+                    <br />
+                    <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
+                    <asp:Label ID="lblSuccess" runat="server" Text=""></asp:Label>
 
                 </ContentTemplate>
             </asp:UpdatePanel>
 
-            <br />
-            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
-            <asp:Label ID="lblSuccess" runat="server" Text="" ></asp:Label>
             
+
+
 
         </div>
         <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure" CancelSelectOnNullParameter="False">

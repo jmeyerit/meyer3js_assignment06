@@ -13,6 +13,8 @@
 * REFERENCES:
 * 
 * https://www.youtube.com/watch?v=xUU9MdnohrI - Helpful for calling a Stored procedure
+* http://stackoverflow.com/questions/8318236/regex-pattern-for-hhmmss-time-string - Helped with Regex string
+* validation for the time.
 * 
 * ALWAYS think of the cat
 * **********************************************************************************************************/
@@ -23,9 +25,6 @@ using dsProductTableAdapters;
 using dsStoreTableAdapters;
 using dsTransactionTypeTableAdapters;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -100,10 +99,30 @@ public partial class _Default : System.Web.UI.Page
        try {
             SqlDataSource.Select(DataSourceSelectArguments.Empty);
             lblSuccess.Text = "Record submitted successfully!";
+            ResetFields();
         }
         catch (Exception ex) {
             lblSuccess.Text = ex.Message;
         }  
+    }
+
+    /// <summary>
+    /// Resets all fields upon successful record insertion
+    /// </summary>
+    private void ResetFields() {
+
+        tbDateOfTransaction.Text = string.Empty;
+        tbPricePerSellableUnitAsMarked.Text = string.Empty;
+        tbPricePerSellableUnitToTheCustomer.Text = string.Empty;
+        tbQty.Text = string.Empty;
+        tbTimeOfTransaction.Text = string.Empty;
+        tbTransactionComment.Text = string.Empty;
+        tbTransactionDetailComment.Text = string.Empty;
+        ddlEmployee.SelectedIndex = 0;
+        ddlLoyalty.SelectedIndex = 0;
+        ddlProduct.SelectedIndex = 0;
+        ddlStore.SelectedIndex = 0;
+        ddlTransactionType.SelectedIndex = 0;
     }
 
 
