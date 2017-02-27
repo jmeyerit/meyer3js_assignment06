@@ -16,12 +16,12 @@
             <asp:DropDownList runat="server" ID="ddlStore"></asp:DropDownList>
             <asp:DropDownList runat="server" ID="ddlEmployee"></asp:DropDownList>
             <asp:DropDownList runat="server" ID="ddlProduct"></asp:DropDownList>
-            <asp:DropDownList runat="server" ID="ddlQty"></asp:DropDownList>
+            <asp:TextBox runat="server" ID="tbQty"></asp:TextBox>
             <asp:TextBox runat="server" ID="tbPricePerSellableUnitAsMarked"></asp:TextBox>
             <asp:TextBox runat="server" ID="tbPricePerSellableUnitToTheCustomer"></asp:TextBox>
             <asp:TextBox runat="server" ID="tbTransactionComment"></asp:TextBox>
             <asp:TextBox runat="server" ID="tbTransactionDetailComment"></asp:TextBox>
-            <asp:DropDownList runat="server" ID="DELETEATSOMEPOINTcouponDertails"></asp:DropDownList>
+            <asp:DropDownList runat="server" ID="DELETEATSOMEPOINTcouponDetailsNULLVALUES"></asp:DropDownList>
             <asp:DropDownList runat="server" ID="DONTKNOWTRANSACTIONID"></asp:DropDownList>
         </div>
     </form>
