@@ -1,0 +1,40 @@
+﻿body{
+	background-color: #ffd29c;
+	font-family:  Rockwell, Arial, Verdana, sans-serif;
+}
+h1{ background-color: #ff8c00; 
+	color: #FFFFFF;
+	font-family: Algerian, "Times New Roman", serif;
+	text-shadow: 2px 2px 2px #000000;
+	}
+h3{background-color: #ff8c00; 
+color: #FFFFFF;
+text-shadow: 2px 2px 2px #000000;
+}
+nav{
+	font-weight: bold;
+	font-size: 2em;
+	word-spacing: .5em;
+	background-color: #ff8c00;
+	text-shadow: 2px 2px 2px #000000;
+	}
+table{
+    border:2px solid black
+}
+
+th, td { padding: 1px; text-align: left;}
+
+td {height: 1px;}
+
+#navColor a{
+	color: #FFFFFF;
+	text-decoration:none;
+	font-family: Algerian, "Times New Roman", serif;
+}
+#navColor a:hover{
+	text-decoration:underline;
+}
+#wrapper{text-align: center;
+         margin-left: auto;
+         margin-right: auto;
+}
