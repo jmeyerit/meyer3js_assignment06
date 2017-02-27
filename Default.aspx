@@ -68,7 +68,7 @@
                 </tr>
             </table>
             <br />
-            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" />
+            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
 
         </div>
         <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure">
@@ -85,7 +85,7 @@
                 <asp:ControlParameter ControlID="tbPricePerSellableUnitToTheCustomer" Name="PricePerSellableUnitToTheCustomer" PropertyName="Text" Type="String" />
                 <asp:ControlParameter ControlID="tbTransactionComment" Name="TransactionComment" PropertyName="Text" Type="String" />
                 <asp:ControlParameter ControlID="tbTransactionDetailComment" Name="TransactionDetailComment" PropertyName="Text" Type="String" />
-                <asp:Parameter DefaultValue="NULL" Name="couponDetailID" Type="Int32" />
+                <asp:Parameter DefaultValue="NULL" Name="couponDetailID" Type="DBNull" />
                 <asp:Parameter DefaultValue="" Direction="InputOutput" Name="TransactionID" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
