@@ -107,17 +107,14 @@
                     </asp:Table>
 
 
-                
+                </ContentTemplate>
+            </asp:UpdatePanel>
 
             <br />
             <asp:Button ID="BtnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
 
-            <asp:Label ID="lblSuccess" runat="server" Text="" ></asp:Label>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-
         </div>
-        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure" CancelSelectOnNullParameter="False">
+        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:GroceryStoreSimulatorConnectionString %>" SelectCommand="spAddTransactionAndDetail" SelectCommandType="StoredProcedure">
             <SelectParameters>
                 <asp:ControlParameter ControlID="ddlLoyalty" Name="LoyaltyID" PropertyName="SelectedValue" Type="Int32" />
                 <asp:ControlParameter ControlID="tbDateOfTransaction" Name="DateOfTransaction" PropertyName="Text" Type="String" />
